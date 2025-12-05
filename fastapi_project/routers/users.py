@@ -69,7 +69,7 @@ async def read_users(
 
 
 @router.get('/{user_id}', response_model=UserPublic, status_code=HTTPStatus.OK)
-def read_user(
+async def read_user(
     user_id: int,
     session: T_Session,
     current_user: CurrentUser,
